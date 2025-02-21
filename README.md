@@ -1,2 +1,2 @@
 # ecommerce-tools
-Handy eCommerce tools for testing purposes
+Handy e-commerce tools for testing purposes
