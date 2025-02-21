@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from './logo.png';
 import { motion } from "framer-motion";
-import { IconArrowDown, IconArrowNarrowRight, IconArrowRight } from "@tabler/icons-react";
+import { IconArrowDown, IconArrowNarrowRight } from "@tabler/icons-react";
 import { useRouter } from 'next/navigation';
 
 export default function Home() {

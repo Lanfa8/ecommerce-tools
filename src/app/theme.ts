@@ -38,7 +38,7 @@ export const mantineTheme: MantineThemeOverride = createTheme({
     primaryColor: "teal",
     components: {
       Container: {
-        styles: (_: any, params: { size?: string | number; fluid?: boolean }) => ({
+        styles: (_: undefined, params: { size?: string | number; fluid?: boolean }) => ({
           root: {
             maxWidth: params.fluid
               ? '100%'
