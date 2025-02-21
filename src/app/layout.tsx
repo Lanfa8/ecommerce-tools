@@ -5,6 +5,7 @@ import '@mantine/notifications/styles.css';
 import { ColorSchemeScript, MantineProvider, DEFAULT_THEME, mantineHtmlProps } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { mantineTheme } from "./theme";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "E-commerce tools",
@@ -36,6 +37,7 @@ export default function RootLayout({
             <Notifications />
             {children}
           </MantineProvider>
+          <SpeedInsights />
       </body>
     </html>
   );
