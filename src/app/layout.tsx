@@ -8,8 +8,19 @@ import { mantineTheme } from "./theme";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  title: "E-commerce tools",
-  description: "Handy e-commerce tools for developers and testers.",
+  title: {
+    template: '%s | Ecommerce Tools',
+    default: 'Ecommerce Tools - Utilitários para Desenvolvedores',
+  },
+  description: "Coleção de ferramentas gratuitas para testar e validar e-commerces. Gerador de GTIN, EAN e mais.",
+  openGraph: {
+    title: 'Ecommerce Tools',
+    description: 'Ferramentas essenciais para desenvolvedores de e-commerce.',
+    url: 'https://seu-dominio.com.br',
+    siteName: 'Ecommerce Tools',
+    locale: 'pt_BR',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -18,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="pt-BR" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
       </head>
