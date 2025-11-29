@@ -3,6 +3,7 @@ import { removeBackground } from "@imgly/background-removal-node";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
+import type { Request, Response } from 'express';
 
 type ResponseData = {
     parsed_image_url: string
@@ -71,7 +72,7 @@ export default async function handler(
 
     try {
         await new Promise<void>((resolve, reject) => {
-            upload.single("image")(req as any, res as any, (err) => {
+            upload.single("image")(req as unknown as Request, res as unknown as Response, (err) => {
                 if (err) {
                     return reject(err);
                 }
@@ -79,7 +80,7 @@ export default async function handler(
             });
         });
 
-        const uploadedFile = (req as any).file;
+        const uploadedFile = (req as unknown as Request).file;
 
         if (!uploadedFile) {
             return res.status(400).json({ error: "No file uploaded" });
