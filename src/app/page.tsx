@@ -7,7 +7,7 @@ import logo from './logo.png';
 import ScrollDownButton from "@/components/ScrollDownButton";
 import ResourcesContainer from "@/components/ResourcesContainer";
 
-export default function Home() {
+export default function Home() {  
   return (
       <AppShell
         header={{ height: 60 }}

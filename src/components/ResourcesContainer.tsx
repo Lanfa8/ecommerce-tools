@@ -41,6 +41,30 @@ export default function ResourcesContainer() {
             Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
           </Button>
         </Card>
+        <Card 
+          shadow="sm" 
+          padding="lg" 
+          radius="md"
+          w={{ base: '100%', sm: '45%'  }}
+          display={"block"}
+          withBorder
+        >
+          <Title order={3} size="h4">Removedor de Fundo de Imagens</Title>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            A ferramenta de Remoção de Fundo de Imagens permite que você elimine o fundo de qualquer imagem de forma rápida e eficiente. 
+            Ideal para e-commerce, marketing e design gráfico, ela facilita a criação de imagens com fundo transparente para diversas aplicações.
+          </Text>
+          <Space h="md" />
+          <Button 
+            fullWidth 
+            color="teal" 
+            component={Link} 
+            href="/images/remove_background"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </Card>
       </Flex>
     </Container>
   )
