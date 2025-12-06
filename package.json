@@ -18,11 +18,11 @@
     "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.13.2",
     "framer-motion": "^12.4.7",
-    "next": "15.1.7",
+    "next": "^16.0.7",
     "path": "^0.12.7",
     "qr-code-styling": "^1.9.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
