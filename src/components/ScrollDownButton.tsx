@@ -1,7 +1,6 @@
 'use client';
 
 import { Anchor } from "@mantine/core";
-import { IconArrowDown } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
 export default function ScrollDownButton({ targetId, component }: { targetId: string, component: React.ReactNode }) {
