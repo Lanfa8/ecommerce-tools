@@ -4,7 +4,7 @@ import { Anchor } from "@mantine/core";
 import { IconArrowDown } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
-export default function ScrollDownButton({ targetId }: { targetId: string }) {
+export default function ScrollDownButton({ targetId, component }: { targetId: string, component: React.ReactNode }) {
   const scrollToComponent = () => {
     const element = document.getElementById(targetId);
     if (element) {
@@ -19,7 +19,7 @@ export default function ScrollDownButton({ targetId }: { targetId: string }) {
       transition={{ repeat: Infinity, duration: 1.2 }}
     >
       <Anchor component="button" onClick={scrollToComponent} underline="always">
-        <IconArrowDown size={48} color="var(--mantine-color-teal-5)"/>
+        {component}
       </Anchor>
     </motion.div>
   );

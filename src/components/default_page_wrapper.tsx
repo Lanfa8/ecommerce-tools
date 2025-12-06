@@ -5,11 +5,11 @@ import { useDisclosure } from '@mantine/hooks';
 import Image from 'next/image';
 import logo from '../app/logo.png'
 import Link from 'next/link';
-import { IconBarcode, IconImageInPicture } from '@tabler/icons-react';
-import { useState } from 'react';
+import { IconBarcode, IconImageInPicture, IconQrcode } from '@tabler/icons-react';
+import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-export function PageWrapper({children}: {children: React.ReactNode}) {
+export function PageWrapper({ children }: { children: React.ReactNode }) {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
   const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(false);
   const [queryClient] = useState(() => new QueryClient())
@@ -45,14 +45,17 @@ export function PageWrapper({children}: {children: React.ReactNode}) {
           <Text>Recursos</Text>
           <Space h="md" />
           {ResourceMap.map((resource) => (
-            <Link key={resource.title}
-              href={resource.href}
-              passHref
-            >
-              <Box>
-                {resource.icon} {resource.title}
-              </Box>
-            </Link>
+            <React.Fragment key={resource.title}>
+              <Link key={resource.title}
+                href={resource.href}
+                passHref
+              >
+                <Box>
+                  {resource.icon} {resource.title}
+                </Box>
+              </Link>
+              <Space h="sm" />
+            </React.Fragment>
           ))}
         </AppShell.Navbar>
         <AppShell.Main>
@@ -73,5 +76,10 @@ const ResourceMap = [
     title: "Removedor de Fundo de Imagens",
     icon: <IconImageInPicture size={24} style={{ display: "inline" }} />,
     href: "/images/remove_background",
+  },
+  {
+    title: "Gerador de QR Code",
+    icon: <IconQrcode size={24} style={{ display: "inline" }} />,
+    href: "/qr_code_generator",
   }
 ]

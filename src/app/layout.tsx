@@ -10,13 +10,14 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
   title: {
     template: '%s | Ecommerce Tools',
-    default: 'Ecommerce Tools - Utilitários para Desenvolvedores',
+    default: 'Ecommerce Tools - Gerador de GTIN, QR Code e Removedor de Fundo',
   },
-  description: "Coleção de ferramentas gratuitas para testar e validar e-commerces. Gerador de GTIN, EAN e mais.",
+  description: "Ferramentas gratuitas para e-commerce e desenvolvedores. Gere códigos GTIN/EAN válidos, crie QR Codes personalizados e remova fundo de imagens com IA.",
+  keywords: ["gerador gtin", "gerador ean", "qr code", "remover fundo", "ecommerce", "ferramentas", "gratis"],
   openGraph: {
-    title: 'Ecommerce Tools',
-    description: 'Ferramentas essenciais para desenvolvedores de e-commerce.',
-    url: 'https://seu-dominio.com.br',
+    title: 'Ecommerce Tools - Ferramentas Gratuitas para E-commerce',
+    description: 'Acesse ferramentas essenciais: Gerador de GTIN/EAN, QR Code Generator e Removedor de Fundo de Imagens. Tudo gratuito e online.',
+    url: 'https://www.ecommercetools.online/',
     siteName: 'Ecommerce Tools',
     locale: 'pt_BR',
     type: 'website',
