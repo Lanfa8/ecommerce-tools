@@ -5,7 +5,7 @@ import { useDisclosure } from '@mantine/hooks';
 import Image from 'next/image';
 import logo from '../app/logo.png'
 import Link from 'next/link';
-import { IconBarcode, IconImageInPicture, IconQrcode } from '@tabler/icons-react';
+import { IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase } from '@tabler/icons-react';
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -81,5 +81,10 @@ const ResourceMap = [
     title: "Gerador de QR Code",
     icon: <IconQrcode size={24} style={{ display: "inline" }} />,
     href: "/qr_code_generator",
+  },
+  {
+    title: "Contador de Caracteres",
+    icon: <IconLetterCase size={24} style={{ display: "inline" }} />,
+    href: "/character_counter",
   }
 ]

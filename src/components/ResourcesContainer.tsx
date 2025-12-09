@@ -2,7 +2,7 @@
 
 import { Button, Card, Center, Container, Flex, Space, Text, Title } from "@mantine/core";
 import Link from "next/link";
-import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase } from "@tabler/icons-react";
 
 export default function ResourcesContainer() {
   return (
@@ -74,6 +74,26 @@ export default function ResourcesContainer() {
             color="teal"
             component={Link}
             href="/qr_code_generator"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconLetterCase size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Contador de Caracteres</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Ferramenta simples e gratuita para contar caracteres de um texto.
+            Ideal para verificar limites de texto em anúncios e SEO.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/character_counter"
           >
             Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
           </Button>
