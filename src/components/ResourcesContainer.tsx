@@ -2,7 +2,7 @@
 
 import { Button, Card, Center, Container, Flex, Space, Text, Title } from "@mantine/core";
 import Link from "next/link";
-import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp } from "@tabler/icons-react";
 
 export default function ResourcesContainer() {
   return (
@@ -94,6 +94,26 @@ export default function ResourcesContainer() {
             color="teal"
             component={Link}
             href="/character_counter"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconTrendingUp size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Tendências Mercado Livre</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Visualize as tendências de busca mais populares no Mercado Livre.
+            Descubra o que está em alta e encontre oportunidades de vendas.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/trends/mercadolivre"
           >
             Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
           </Button>
