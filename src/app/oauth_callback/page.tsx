@@ -5,9 +5,9 @@ import { Container, Title, TextInput, ActionIcon, CopyButton, Tooltip, Stack, Pa
 import { IconCopy, IconCheck } from "@tabler/icons-react";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
-export default function OAuthCallbackPage() {
+function OAuthCallbackComponent() {
     const [accessToken, setAccessToken] = useState("");
     const [refreshToken, setRefreshToken] = useState("");
 
@@ -93,3 +93,9 @@ export default function OAuthCallbackPage() {
         </PageWrapper>
     )
 }
+
+export default function OAuthCallbackPage() {
+    return <Suspense fallback={<div>Loading...</div>}>
+        <OAuthCallbackComponent />
+    </Suspense>
+};

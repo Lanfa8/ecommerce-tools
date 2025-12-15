@@ -1,9 +1,8 @@
 import { createMercadoLivreClient } from '@/clients/mercadolivre';
 import { getValidToken } from '@/services/platform/mercadolivre/auth';
-import type { NextApiRequest } from 'next'
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(req: NextApiRequest) {
+export async function GET(req: NextRequest) {
     const meliToken = await getValidToken();
     const mercadolivreClient = createMercadoLivreClient(meliToken);
 
