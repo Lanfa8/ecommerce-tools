@@ -2,7 +2,7 @@
 
 import { Button, Card, Center, Container, Flex, Space, Text, Title } from "@mantine/core";
 import Link from "next/link";
-import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip } from "@tabler/icons-react";
 
 export default function ResourcesContainer() {
   return (
@@ -118,6 +118,26 @@ export default function ResourcesContainer() {
             Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
           </Button>
         </CardWrapper>
+        {/* <CardWrapper>
+          <Flex gap={8}>
+            <IconShip size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">COMEXSTAT - Comércio Exterior</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Consulte dados de importação e exportação do Brasil através da API COMEXSTAT do MDIC.
+            Analise volumes, valores e tendências por NCM, país e estado.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/comexstat"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper> */}
       </Flex>
     </Container>
   )
