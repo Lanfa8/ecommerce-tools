@@ -1,6 +1,6 @@
 'use client';
 
-import { AppShell, Box, Button, Center, Group, Title } from "@mantine/core";
+import { AppShell, Box, Button, Center, Group, Stack, Text, Title } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 import logo from './logo.png';
@@ -29,17 +29,22 @@ export default function Home() {
               src={logo}
               width={30}
               height={30}
-              alt="ecommerce tools logo"
+              alt="Ecommerce Tools - Ferramentas Gratuitas para E-commerce"
             />
           </Link>
         </Group>
       </AppShell.Header>
       <AppShell.Main>
+
         <Center h={"70vh"}>
           <Box w={"50%"} >
             <Title order={1} size={60} textWrap="pretty" style={{ textAlign: "center" }}>
               Todas ferramentas que você precisa para testar e potencializar seu <Box component="span" c="teal" fw={700}>e-commerce</Box>
             </Title>
+            <Text ta="center" c="dimmed" mt="md" size="lg">
+              Ferramentas 100% gratuitas e online: Gerador de GTIN/EAN, Código de Barras, QR Code,
+              Removedor de Fundo de Imagens, Contador de Caracteres e Tendências do Mercado Livre.
+            </Text>
             <Center>
               <Button onClick={scrollToComponent} size="lg" mt="xl" color="teal">
                 Começar Agora
@@ -54,6 +59,28 @@ export default function Home() {
           />
         </Center>
         <ResourcesContainer />
+        <Center mt={80} mb={40}>
+          <Box w={{ base: '90%', sm: '70%', md: '60%' }}>
+            <Title order={2} ta="center" mb="lg">
+              Por que usar o Ecommerce Tools?
+            </Title>
+            <Stack gap="md">
+              <Text c="dimmed" ta="center">
+                O <strong>Ecommerce Tools</strong> é uma plataforma completa de ferramentas gratuitas projetadas para lojistas,
+                desenvolvedores e profissionais de e-commerce. Todas as ferramentas funcionam diretamente no navegador,
+                sem necessidade de cadastro, download ou instalação.
+              </Text>
+              <Text c="dimmed" ta="center">
+                Se você vende no <strong>Mercado Livre, Shopee, Amazon, Magazine Luiza</strong> ou em sua própria loja virtual,
+                nossas ferramentas ajudam a criar códigos de barras, gerar QR Codes profissionais, remover fundos de fotos de produtos,
+                contar caracteres para títulos otimizados e acompanhar as tendências de busca dos maiores marketplaces.
+              </Text>
+              <Text c="dimmed" ta="center">
+                Economize tempo e melhore a qualidade dos seus anúncios com ferramentas pensadas para quem vende online.
+              </Text>
+            </Stack>
+          </Box>
+        </Center>
       </AppShell.Main>
     </AppShell>
   );

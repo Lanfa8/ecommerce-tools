@@ -29,12 +29,19 @@ export const metadata: Metadata = {
     "gerador de barcode",
   ],
   openGraph: {
-    title: "Gerador de Código de Barras Online Grátis",
+    title: "Gerador de Código de Barras Online Grátis — EAN-13, CODE 128, UPC",
     description:
-      "Ferramenta gratuita para gerar códigos de barras nos formatos EAN-13, UPC, CODE 128 e mais. Personalize e baixe em PNG.",
+      "Ferramenta gratuita para gerar códigos de barras nos formatos EAN-13, EAN-8, UPC, CODE 128, CODE 39, ITF-14 e mais. Personalize cores, tamanho e baixe em PNG.",
     type: "website",
     url: "https://www.ecommercetools.online/barcode_generator",
     siteName: "Ecommerce Tools",
+    locale: "pt_BR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gerador de Código de Barras Online Grátis",
+    description:
+      "Crie códigos de barras EAN-13, UPC, CODE 128 e mais. Personalize e baixe em PNG gratuitamente.",
   },
   alternates: {
     canonical: "https://www.ecommercetools.online/barcode_generator",

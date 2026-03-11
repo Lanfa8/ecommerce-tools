@@ -36,7 +36,8 @@ export function TrendsDisplay() {
   if (loading) {
     return (
       <>
-        <Title order={2} mb="lg">Tendências de Busca - Mercado Livre</Title>
+        <Title order={1} mb="xs">Tendências de Busca — Mercado Livre</Title>
+        <Text c="dimmed" mb="lg">Carregando as tendências mais recentes...</Text>
         <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }}>
           {Array.from({ length: 12 }).map((_, index) => (
             <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
@@ -59,7 +60,11 @@ export function TrendsDisplay() {
 
   return (
     <>
-      <Title order={2} mb="lg">Tendências de Busca - Mercado Livre</Title>
+      <Title order={1} mb="xs">Tendências de Busca — Mercado Livre</Title>
+      <Text c="dimmed" mb="lg">
+        Acompanhe em tempo real os termos e produtos mais buscados no Mercado Livre. 
+        Descubra oportunidades de vendas, identifique nichos em alta e otimize seus anúncios com base nas tendências do maior marketplace da América Latina.
+      </Text>
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }}>
         {trends.map((trend, index) => (
           <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>

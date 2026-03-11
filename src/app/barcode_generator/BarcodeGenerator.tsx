@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, ColorInput, Group, NumberInput, Paper, Select, Stack, TextInput, Title, Text } from "@mantine/core";
+import { Button, ColorInput, Group, NumberInput, Paper, Select, Stack, TextInput, Title, Text, Accordion, Space } from "@mantine/core";
 import { IconDownload, IconBarcode } from "@tabler/icons-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import JsBarcode from "jsbarcode";
@@ -107,10 +107,11 @@ export function BarcodeGenerator() {
         <Paper p="xl">
             <Group align="center" mb="md" gap="sm">
                 <IconBarcode size={32} />
-                <Title order={1}>Gerador de Código de Barras</Title>
+                <Title order={1}>Gerador de Código de Barras Online Grátis</Title>
             </Group>
             <Text c="dimmed" mb="lg">
-                Gere códigos de barras personalizados nos formatos EAN-13, EAN-8, UPC, CODE 128, CODE 39, ITF-14 e mais. Baixe em alta qualidade como PNG.
+                Crie códigos de barras personalizados nos formatos EAN-13, EAN-8, UPC, CODE 128, CODE 39, ITF-14, MSI e Pharmacode. 
+                Personalize cores, tamanho e baixe gratuitamente em PNG de alta qualidade. Ideal para e-commerce, logística, varejo e testes de sistema.
             </Text>
 
             <Group align="flex-start" mt="md" wrap="wrap">
@@ -195,6 +196,58 @@ export function BarcodeGenerator() {
                     <svg ref={svgRef} />
                 </Paper>
             </Group>
+
+            <Space h="xl" />
+
+            <Title order={2} size="h3" mb="md">Sobre o Gerador de Código de Barras</Title>
+            <Text c="dimmed" mb="lg">
+                O código de barras é uma representação visual de dados que pode ser lida por scanners ópticos. 
+                É amplamente utilizado no varejo, logística, e-commerce e na gestão de estoque. 
+                Cada formato possui suas características e aplicações específicas:
+            </Text>
+            <Text c="dimmed" mb="md">
+                <strong>EAN-13</strong> é o formato mais utilizado no Brasil e no mundo para identificação de produtos no varejo. 
+                <strong> EAN-8</strong> é uma versão compacta para embalagens pequenas. 
+                <strong> UPC</strong> é o padrão norte-americano com 12 dígitos. 
+                <strong> CODE 128</strong> aceita texto livre e é ideal para etiquetas de logística. 
+                <strong> CODE 39</strong> suporta letras e números, sendo comum na indústria. 
+                <strong> ITF-14</strong> é usado para caixas e embalagens de transporte.
+            </Text>
+
+            <Space h="lg" />
+
+            <Title order={2} size="h3" mb="md">Perguntas Frequentes</Title>
+            <Accordion variant="separated">
+                <Accordion.Item value="o-que-e">
+                    <Accordion.Control>O que é um código de barras?</Accordion.Control>
+                    <Accordion.Panel>
+                        Um código de barras é uma representação gráfica de dados numéricos ou alfanuméricos, composta por barras paralelas e espaços de larguras variáveis. 
+                        Ele é lido por scanners ópticos e é essencial para automação comercial, controle de estoque e rastreamento de produtos em e-commerce e varejo.
+                    </Accordion.Panel>
+                </Accordion.Item>
+                <Accordion.Item value="como-gerar">
+                    <Accordion.Control>Como gerar um código de barras online?</Accordion.Control>
+                    <Accordion.Panel>
+                        Basta escolher o formato desejado (EAN-13, CODE 128, UPC, etc.), inserir o valor/dados, personalizar cores e tamanho, 
+                        e clicar em &quot;Baixar como PNG&quot;. A imagem será gerada em alta qualidade, pronta para impressão ou uso digital.
+                    </Accordion.Panel>
+                </Accordion.Item>
+                <Accordion.Item value="qual-formato">
+                    <Accordion.Control>Qual formato de código de barras devo usar?</Accordion.Control>
+                    <Accordion.Panel>
+                        Para produtos no varejo brasileiro, use <strong>EAN-13</strong>. Para embalagens pequenas, <strong>EAN-8</strong>. 
+                        Para logística e etiquetas internas, <strong>CODE 128</strong> é o mais versátil. Para exportação aos EUA, use <strong>UPC</strong>. 
+                        Para caixas de transporte, <strong>ITF-14</strong>.
+                    </Accordion.Panel>
+                </Accordion.Item>
+                <Accordion.Item value="gratuito">
+                    <Accordion.Control>O gerador de código de barras é gratuito?</Accordion.Control>
+                    <Accordion.Panel>
+                        Sim! Nosso gerador de código de barras é 100% gratuito, sem necessidade de cadastro. 
+                        Você pode gerar quantos códigos quiser e baixar as imagens em PNG de alta qualidade.
+                    </Accordion.Panel>
+                </Accordion.Item>
+            </Accordion>
         </Paper>
     );
 }
