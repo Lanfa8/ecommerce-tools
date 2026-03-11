@@ -118,6 +118,25 @@ export default function ResourcesContainer() {
             Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
           </Button>
         </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconBarcode size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Gerador de Código de Barras</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Gere códigos de barras personalizados nos formatos EAN-13, EAN-8, UPC, CODE 128, CODE 39, ITF-14 e mais. Baixe em alta qualidade como PNG.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/barcode_generator"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
         {/* <CardWrapper>
           <Flex gap={8}>
             <IconShip size={24} style={{ display: "inline" }} />

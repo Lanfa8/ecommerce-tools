@@ -73,6 +73,11 @@ const ResourceMap = [
     href: "/generate_gtin",
   },
   {
+    title: "Gerador de Código de Barras",
+    icon: <IconBarcode size={24} style={{ display: "inline" }} />,
+    href: "/barcode_generator",
+  },
+  {
     title: "Removedor de Fundo de Imagens",
     icon: <IconImageInPicture size={24} style={{ display: "inline" }} />,
     href: "/images/remove_background",

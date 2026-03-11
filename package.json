@@ -21,6 +21,7 @@
     "axios": "^1.13.5",
     "dayjs": "^1.11.19",
     "framer-motion": "^12.33.0",
+    "jsbarcode": "^3.12.3",
     "next": "^16.1.6",
     "path": "^0.12.7",
     "qr-code-styling": "^1.9.2",
