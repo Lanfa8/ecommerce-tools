@@ -2,7 +2,7 @@
 
 import { Button, Card, Center, Container, Flex, Space, Text, Title } from "@mantine/core";
 import Link from "next/link";
-import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag, IconPackage } from "@tabler/icons-react";
 
 export default function ResourcesContainer() {
   return (
@@ -156,6 +156,26 @@ export default function ResourcesContainer() {
             Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
           </Button>
         </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconPackage size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Gerador de Produtos Fake</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Gere produtos fictícios completos para testes de e-commerce. Títulos, descrições, preços, atributos, SKU, EAN, imagens e mais — tudo gerado automaticamente com dados realistas.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/fake_product_generator"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
+
         {/* <CardWrapper>
           <Flex gap={8}>
             <IconShip size={24} style={{ display: "inline" }} />
