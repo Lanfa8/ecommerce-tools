@@ -6,7 +6,7 @@ import Link from "next/link";
 import logo from './logo.png';
 import ScrollDownButton from "@/components/ScrollDownButton";
 import ResourcesContainer from "@/components/ResourcesContainer";
-import { IconArrowDown } from "@tabler/icons-react";
+import { IconArrowDown, IconBulb } from "@tabler/icons-react";
 
 export default function Home() {
   const scrollToComponent = () => {
@@ -23,7 +23,8 @@ export default function Home() {
       withBorder={false}
     >
       <AppShell.Header>
-        <Group h="100%" px="md" justify="center">
+        <Group h="100%" px="md" justify="space-between">
+          <Box w={180} />
           <Link href="/">
             <Image
               src={logo}
@@ -32,6 +33,22 @@ export default function Home() {
               alt="Ecommerce Tools - Ferramentas Gratuitas para E-commerce"
             />
           </Link>
+          <Box w={200} style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            {process.env.NEXT_PUBLIC_SUGGEST_FEATURE_URL && (
+              <Button
+                component="a"
+                href={process.env.NEXT_PUBLIC_SUGGEST_FEATURE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="subtle"
+                color="teal"
+                size="compact-sm"
+                leftSection={<IconBulb size={16} />}
+              >
+                Sugerir funcionalidade
+              </Button>
+            )}
+          </Box>
         </Group>
       </AppShell.Header>
       <AppShell.Main>

@@ -1,11 +1,11 @@
 "use client";
 
-import { AppShell, Box, Burger, Group, Space, Text } from '@mantine/core';
+import { AppShell, Box, Burger, Button, Group, Space, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Image from 'next/image';
 import logo from '../app/logo.png'
 import Link from 'next/link';
-import { IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag, IconPackage } from '@tabler/icons-react';
+import { IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag, IconPackage, IconBulb } from '@tabler/icons-react';
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -38,7 +38,22 @@ export function PageWrapper({ children }: { children: React.ReactNode }) {
                 alt="ecommerce tools logo"
               />
             </Link>
-            <Box />
+            {process.env.NEXT_PUBLIC_SUGGEST_FEATURE_URL ? (
+              <Button
+                component="a"
+                href={process.env.NEXT_PUBLIC_SUGGEST_FEATURE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="subtle"
+                color="teal"
+                size="compact-sm"
+                leftSection={<IconBulb size={16} />}
+              >
+                Sugerir funcionalidade
+              </Button>
+            ) : (
+              <Box />
+            )}
           </Group>
         </AppShell.Header>
         <AppShell.Navbar p="md" withBorder>
