@@ -2,7 +2,7 @@
 
 import { Button, Card, Center, Container, Flex, Space, Text, Title } from "@mantine/core";
 import Link from "next/link";
-import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag } from "@tabler/icons-react";
 
 export default function ResourcesContainer() {
   return (
@@ -133,6 +133,25 @@ export default function ResourcesContainer() {
             color="teal"
             component={Link}
             href="/barcode_generator"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconTag size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Gerador de SKU</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Crie códigos SKU padronizados para seus produtos. Adicione nome, atributos como cor e tamanho, e gere sufixos aleatórios ou sequenciais.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/sku_generator"
           >
             Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
           </Button>

@@ -5,7 +5,7 @@ import { useDisclosure } from '@mantine/hooks';
 import Image from 'next/image';
 import logo from '../app/logo.png'
 import Link from 'next/link';
-import { IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip } from '@tabler/icons-react';
+import { IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag } from '@tabler/icons-react';
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -101,5 +101,10 @@ const ResourceMap = [
     title: "COMEXSTAT",
     icon: <IconShip size={24} style={{ display: "inline" }} />,
     href: "/comexstat",
+  },
+  {
+    title: "Gerador de SKU",
+    icon: <IconTag size={24} style={{ display: "inline" }} />,
+    href: "/sku_generator",
   }
 ]
