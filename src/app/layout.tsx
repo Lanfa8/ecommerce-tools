@@ -6,6 +6,7 @@ import { ColorSchemeScript, MantineProvider, DEFAULT_THEME, mantineHtmlProps } f
 import { Notifications } from '@mantine/notifications';
 import { mantineTheme } from "./theme";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const BASE_URL = 'https://www.ecommercetools.online';
 
@@ -81,22 +82,23 @@ export default function RootLayout({
         />
       </head>
       <body>
-          <MantineProvider
-            theme={{
-              ...mantineTheme,
-              fontFamily: 'Roboto, sans-serif',
-              fontFamilyMonospace: 'Monaco, Courier, monospace',
-              headings: {
-                fontFamily: `Roboto, ${DEFAULT_THEME.fontFamily}`,
-              },
-            }}
-            forceColorScheme="dark"
-          >
-            <Notifications />
-            {children}
-          </MantineProvider>
-          <SpeedInsights />
+        <MantineProvider
+          theme={{
+            ...mantineTheme,
+            fontFamily: 'Roboto, sans-serif',
+            fontFamilyMonospace: 'Monaco, Courier, monospace',
+            headings: {
+              fontFamily: `Roboto, ${DEFAULT_THEME.fontFamily}`,
+            },
+          }}
+          forceColorScheme="dark"
+        >
+          <Notifications />
+          {children}
+        </MantineProvider>
+        <SpeedInsights />
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
     </html>
   );
 }
