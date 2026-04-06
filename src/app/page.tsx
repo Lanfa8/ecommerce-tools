@@ -60,7 +60,8 @@ export default function Home() {
             </Title>
             <Text ta="center" c="dimmed" mt="md" size="lg">
               Ferramentas 100% gratuitas e online: Gerador de GTIN/EAN, Código de Barras, QR Code,
-              Removedor de Fundo de Imagens, Contador de Caracteres e Tendências do Mercado Livre.
+              Removedor de Fundo de Imagens, Contador de Caracteres, Tendências do Mercado Livre
+              e Calculadoras de Lucro, Precificação, FBA Amazon e Ponto de Equilíbrio.
             </Text>
             <Center>
               <Button onClick={scrollToComponent} size="lg" mt="xl" color="teal">

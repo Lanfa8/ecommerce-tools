@@ -2,7 +2,7 @@
 
 import { Button, Card, Center, Container, Flex, Space, Text, Title } from "@mantine/core";
 import Link from "next/link";
-import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag, IconPackage } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag, IconPackage, IconCalculator, IconBrandShopee, IconBrandAmazon, IconScale, IconReceipt } from "@tabler/icons-react";
 
 export default function ResourcesContainer() {
   return (
@@ -171,6 +171,101 @@ export default function ResourcesContainer() {
             color="teal"
             component={Link}
             href="/fake_product_generator"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconCalculator size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Calculadoras E-commerce</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Acesse todas as nossas calculadoras: lucro Shopify, custos FBA Amazon, ponto de equilíbrio e precificação de produtos. Ferramentas essenciais para maximizar seus lucros no e-commerce.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/calculators"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconBrandShopee size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Calculadora de Lucro Shopify</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Calcule o lucro líquido e a margem de lucro das suas vendas na Shopify, considerando taxas da plataforma, custo do produto, envio e impostos.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/calculators/shopify_profit"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconBrandAmazon size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Calculadora FBA Amazon</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Estime custos de Fulfillment by Amazon (FBA), comissão por categoria, lucro líquido e ROI. Descubra se vale a pena vender via FBA.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/calculators/amazon_fba"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconScale size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Calculadora Ponto de Equilíbrio</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Descubra quantas unidades você precisa vender para cobrir todos os custos fixos e variáveis do seu e-commerce e começar a lucrar.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/calculators/break_even"
+          >
+            Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
+          </Button>
+        </CardWrapper>
+        <CardWrapper>
+          <Flex gap={8}>
+            <IconReceipt size={24} style={{ display: "inline" }} />
+            <Title order={3} size="h4">Calculadora de Precificação</Title>
+          </Flex>
+          <Space h="xs" />
+          <Text size="sm" c="dimmed" >
+            Calcule o preço de venda ideal considerando custo, margem de lucro desejada, taxas do marketplace e impostos. Nunca mais precifique no chute.
+          </Text>
+          <Space h="md" />
+          <Button
+            fullWidth
+            color="teal"
+            component={Link}
+            href="/calculators/product_pricing"
           >
             Conferir &nbsp;&nbsp;<IconArrowNarrowRight size={20} />
           </Button>

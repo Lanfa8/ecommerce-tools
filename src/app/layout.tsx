@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     "ferramentas marketplace",
     "código de barras online",
     "barcode generator",
+    "calculadora lucro shopify",
+    "calculadora fba amazon",
+    "calculadora ponto de equilíbrio",
+    "calculadora precificação",
+    "calculadora ecommerce",
   ],
   openGraph: {
     title: 'Ecommerce Tools - Ferramentas Gratuitas para E-commerce',

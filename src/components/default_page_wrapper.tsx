@@ -5,7 +5,7 @@ import { useDisclosure } from '@mantine/hooks';
 import Image from 'next/image';
 import logo from '../app/logo.png'
 import Link from 'next/link';
-import { IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag, IconPackage, IconBulb } from '@tabler/icons-react';
+import { IconBarcode, IconImageInPicture, IconQrcode, IconLetterCase, IconTrendingUp, IconShip, IconTag, IconPackage, IconBulb, IconCalculator, IconBrandShopee, IconBrandAmazon, IconScale, IconReceipt } from '@tabler/icons-react';
 import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -126,5 +126,30 @@ const ResourceMap = [
     title: "Gerador de Produtos Fake",
     icon: <IconPackage size={24} style={{ display: "inline" }} />,
     href: "/fake_product_generator",
+  },
+  {
+    title: "Calculadoras E-commerce",
+    icon: <IconCalculator size={24} style={{ display: "inline" }} />,
+    href: "/calculators",
+  },
+  {
+    title: "Lucro Shopify",
+    icon: <IconBrandShopee size={24} style={{ display: "inline" }} />,
+    href: "/calculators/shopify_profit",
+  },
+  {
+    title: "FBA Amazon",
+    icon: <IconBrandAmazon size={24} style={{ display: "inline" }} />,
+    href: "/calculators/amazon_fba",
+  },
+  {
+    title: "Ponto de Equilíbrio",
+    icon: <IconScale size={24} style={{ display: "inline" }} />,
+    href: "/calculators/break_even",
+  },
+  {
+    title: "Precificação",
+    icon: <IconReceipt size={24} style={{ display: "inline" }} />,
+    href: "/calculators/product_pricing",
   }
 ]
