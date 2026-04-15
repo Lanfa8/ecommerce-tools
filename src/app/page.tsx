@@ -7,6 +7,27 @@ import logo from './logo.png';
 import ScrollDownButton from "@/components/ScrollDownButton";
 import ResourcesContainer from "@/components/ResourcesContainer";
 import { IconArrowDown, IconBulb } from "@tabler/icons-react";
+import Script from "next/script";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Ecommerce Tools",
+  url: "https://www.ecommercetools.online",
+  description:
+    "Ferramentas gratuitas e online para e-commerce e desenvolvedores. Gere códigos GTIN/EAN válidos, crie QR Codes personalizados, gere códigos de barras, remova fundo de imagens com IA, conte caracteres e acompanhe tendências do Mercado Livre.",
+  inLanguage: "pt-BR",
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Ecommerce Tools",
+  url: "https://www.ecommercetools.online",
+  description:
+    "Plataforma de ferramentas gratuitas para e-commerce, lojistas e desenvolvedores.",
+  logo: "https://www.ecommercetools.online/logo.png",
+};
 
 export default function Home() {
   const scrollToComponent = () => {
@@ -22,6 +43,18 @@ export default function Home() {
       padding="md"
       withBorder={false}
     >
+      <Script
+        id="schema-website"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <Script
+        id="schema-organization"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <AppShell.Header>
         <Group h="100%" px="md" justify="space-between">
           <Box w={180} />
@@ -103,4 +136,3 @@ export default function Home() {
     </AppShell>
   );
 }
-

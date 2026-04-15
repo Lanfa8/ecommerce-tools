@@ -2,6 +2,8 @@ import { PageWrapper } from "@/components/default_page_wrapper";
 import { Container, Title, Text, Stack, Space } from "@mantine/core";
 import { ComexstatDisplay } from "./ComexstatDisplay";
 import type { Metadata } from "next";
+import { SchemaMarkup } from "@/components/SchemaMarkup";
+import { FaqSection } from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: "COMEXSTAT — Estatísticas de Comércio Exterior do Brasil (Importação e Exportação)",
@@ -41,9 +43,39 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "O que é o COMEXSTAT?",
+    answer: "COMEXSTAT é o sistema oficial de estatísticas de comércio exterior do Brasil, mantido pelo MDIC (Ministério do Desenvolvimento, Indústria, Comércio e Serviços). Ele disponibiliza dados detalhados de importação e exportação do país, incluindo valores FOB, volumes, países de origem/destino e classificação NCM dos produtos.",
+  },
+  {
+    question: "O que é NCM e como usar nos filtros?",
+    answer: "NCM (Nomenclatura Comum do Mercosul) é o código de 8 dígitos que classifica todos os produtos comercializados internacionalmente. Você pode usar o código NCM nos filtros para pesquisar dados de importação e exportação de produtos específicos. Por exemplo, NCM 6110.20.00 se refere a pulôveres e suéteres de algodão.",
+  },
+  {
+    question: "Os dados são oficiais e confiáveis?",
+    answer: "Sim. Os dados são obtidos diretamente da API oficial do COMEXSTAT/MDIC, que é a fonte oficial de estatísticas de comércio exterior do governo brasileiro. Os dados são os mesmos utilizados em relatórios oficiais e análises de mercado.",
+  },
+  {
+    question: "Para que posso usar esses dados no e-commerce?",
+    answer: "Os dados do COMEXSTAT são valiosos para vendedores de e-commerce que desejam entender a dinâmica de importação de produtos que vendem, identificar tendências de mercado, encontrar novos fornecedores internacionais, analisar a concorrência de produtos importados e tomar decisões de precificação baseadas em dados reais de comércio exterior.",
+  },
+];
+
 export default function ComexstatPage() {
   return (
     <PageWrapper>
+      <SchemaMarkup
+        schemas={[
+          {
+            type: "SoftwareApplication",
+            name: "COMEXSTAT — Estatísticas de Comércio Exterior do Brasil",
+            description: "Consulte dados de importação e exportação do Brasil pela API COMEXSTAT do MDIC.",
+            url: "https://www.ecommercetools.online/comexstat",
+            applicationCategory: "BusinessApplication",
+          },
+        ]}
+      />
       <Container fluid>
         <Stack gap="md">
           <div>
@@ -57,6 +89,7 @@ export default function ComexstatPage() {
           <ComexstatDisplay />
         </Stack>
       </Container>
+      <FaqSection items={faqItems} />
     </PageWrapper>
   );
 }

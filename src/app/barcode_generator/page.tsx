@@ -2,6 +2,8 @@ import { Container } from "@mantine/core";
 import { PageWrapper } from "@/components/default_page_wrapper";
 import type { Metadata } from "next";
 import { BarcodeGenerator } from "./BarcodeGenerator";
+import { SchemaMarkup } from "@/components/SchemaMarkup";
+import { FaqSection } from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: "Gerador de Código de Barras Online Grátis — EAN-13, CODE 128, UPC e mais",
@@ -48,12 +50,47 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "Quais formatos de código de barras são suportados?",
+    answer: "Nossa ferramenta suporta os principais formatos: EAN-13, EAN-8, UPC-A, UPC-E, CODE 128, CODE 39, ITF-14, MSI, Pharmacode e Codabar. Cada formato atende a necessidades específicas — EAN-13 é o padrão para produtos no varejo brasileiro, CODE 128 é usado em logística, e ITF-14 em embalagens de transporte.",
+  },
+  {
+    question: "Posso personalizar a aparência do código de barras?",
+    answer: "Sim. Você pode personalizar a cor das barras, a cor de fundo, a largura e altura do código, a margem, e se deseja exibir o texto do número abaixo do código. Todas as personalizações são refletidas em tempo real na pré-visualização.",
+  },
+  {
+    question: "Em que formato posso baixar o código de barras?",
+    answer: "Os códigos de barras são gerados e podem ser baixados em formato PNG de alta qualidade, pronto para uso em etiquetas, embalagens, listagens de produtos em marketplaces e materiais impressos.",
+  },
+  {
+    question: "Os códigos de barras gerados são válidos para uso comercial?",
+    answer: "Os códigos de barras são gerados com a estrutura e dígito verificador corretos. No entanto, para uso comercial, o número do código deve ser um EAN/GTIN registrado na GS1. Esta ferramenta é ideal para testes, protótipos e geração visual de barras a partir de números que você já possui.",
+  },
+  {
+    question: "Preciso instalar algum software para gerar códigos de barras?",
+    answer: "Não. A ferramenta funciona inteiramente no navegador. Não é necessário instalar nenhum software, plugin ou extensão. Basta acessar a página, inserir o número desejado, personalizar e baixar o código de barras gratuitamente.",
+  },
+];
+
 export default function BarcodeGeneratorPage() {
   return (
     <PageWrapper>
+      <SchemaMarkup
+        schemas={[
+          {
+            type: "SoftwareApplication",
+            name: "Gerador de Código de Barras Online",
+            description: "Crie códigos de barras personalizados nos formatos EAN-13, CODE 128, UPC e mais. Grátis e online.",
+            url: "https://www.ecommercetools.online/barcode_generator",
+            applicationCategory: "UtilitiesApplication",
+          },
+        ]}
+      />
       <Container fluid>
         <BarcodeGenerator />
       </Container>
+      <FaqSection items={faqItems} />
     </PageWrapper>
   );
 }
